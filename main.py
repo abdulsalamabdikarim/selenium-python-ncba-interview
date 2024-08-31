@@ -3,10 +3,10 @@ from selenium.webdriver.chrome.service import Service
 import time
 
 
-# service = Service(executable_path = "/chromedriver")
-driver = webdriver.Chrome()
+service = Service(executable_path = "./chromedriver")
+driver = webdriver.Chrome(service = service)
 
-driver.get("https://react.dev/learn/tutorial-tic-tac-toe")
+driver.get("https://google.com")
 time.sleep(10)
 
 driver.quit()
