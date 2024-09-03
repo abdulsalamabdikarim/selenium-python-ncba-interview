@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 import time
 
 
@@ -15,10 +16,47 @@ create_account_button = driver.find_element(By.XPATH, "//*[@id='yDmH0d']/c-wiz/d
 
 create_account_button.click()
 
+time.sleep(10)
 personal_use_option = driver.find_element(By.XPATH, "//*[@id='yDmH0d']/c-wiz/div/div[3]/div/div[2]/div/div/div[2]/div/ul/li[1]")
 personal_use_option.click()
 
 
+
+first_name = driver.find_element(By.XPATH, "//*[@id='firstName']")
+first_name.send_keys("John")
+first_name.send_keys(Keys.RETURN)
+
+last_name = driver.find_element(By.XPATH, "//*[@id='lastName']")
+last_name.send_keys("Doe")
+last_name.send_keys(Keys.RETURN)
+time.sleep(15)
+
+birth_month = driver.find_element(By.XPATH, "//*[@id='month']")
+birth_month.click()
+january = driver.find_element(By.XPATH, "//*[@id='month']/option[2]")
+january.click()
+time.sleep(3)
+
+birth_day = driver.find_element(By.XPATH, "//*[@id='day']")
+birth_day.click()
+birth_day.send_keys("01")
+birth_day.send_keys(Keys.RETURN)
+time.sleep(3)
+
+birth_year = driver.find_element(By.XPATH, "//*[@id='year']")
+birth_year.click()
+birth_year.send_keys("2000")
+birth_year.send_keys(Keys.RETURN)
+time.sleep(3)
+
+gender = driver.find_element(By.XPATH, "//*[@id='gender']")
+gender.click()
+male_option = driver.find_element(By.XPATH, "//*[@id='gender']/option[3]")
+male_option.click()
+time.sleep(5)
+
+next_button = driver.find_element(By.XPATH, "//*[@id='birthdaygenderNext']/div/button/span")
+next_button.click()
 
 time.sleep(10)
 
