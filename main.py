@@ -20,11 +20,12 @@ time.sleep(3)
 personal_use_option = driver.find_element(By.XPATH, "//*[@id='yDmH0d']/c-wiz/div/div[3]/div/div[2]/div/div/div[2]/div/ul/li[1]")
 personal_use_option.click()
 
-
+time.sleep(5)
 
 first_name = driver.find_element(By.XPATH, "//*[@id='firstName']")
 first_name.send_keys("John")
 first_name.send_keys(Keys.RETURN)
+time.sleep(3)
 
 last_name = driver.find_element(By.XPATH, "//*[@id='lastName']")
 last_name.send_keys("Doe")
@@ -51,6 +52,7 @@ time.sleep(3)
 
 gender = driver.find_element(By.XPATH, "//*[@id='gender']")
 gender.click()
+time.sleep(3)
 male_option = driver.find_element(By.XPATH, "//*[@id='gender']/option[3]")
 male_option.click()
 time.sleep(5)
@@ -62,6 +64,7 @@ time.sleep(5)
 
 email_field = driver.find_element(By.XPATH, "//*[@id='yDmH0d']/c-wiz/div/div[2]/div/div/div/form/span/section/div/div/div/div[1]/div/div[1]/div/div[1]/input")
 email_field.click()
+time.sleep(3)
 email_field.send_keys("rrrdddssswwwaaa")
 time.sleep(3)
 
@@ -72,6 +75,7 @@ time.sleep(5)
 password = driver.find_element(By.XPATH, "//*[@id='passwd']/div[1]/div/div[1]/input")
 # password.click()
 password.send_keys("N3333331")
+time.sleep(3)
 password.send_keys(Keys.RETURN)
 time.sleep(3)
 
@@ -81,7 +85,8 @@ confirm_password.send_keys("N3333331")
 time.sleep(3)
 next_button3 = driver.find_element(By.XPATH, "//*[@id='createpasswordNext']/div/button/span")
 next_button3.click()
-time.sleep(3)
+
+time.sleep(5)
 
 
 
